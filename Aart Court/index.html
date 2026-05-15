@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aart Court Resident Satisfaction Survey</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <img class="brand-logo" src="Aart%20court.jpeg" alt="Aart Court">
+        <div class="header-copy">
+          <p class="eyebrow">Confidential resident feedback</p>
+          <h1>Monthly Resident Satisfaction Survey</h1>
+          <p class="intro">Aart Court | Grade A Residential | Lagos, Nigeria</p>
+          <p class="meta">Approx. 6 minutes to complete</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <form
+        id="surveyForm"
+        class="survey-form"
+        data-endpoint="https://script.google.com/macros/s/AKfycbxrh5dMnTA6PJqC-mDDtYdZn9fU0z9aEFjSC7nEIPNjqG0NPu_eEP2pMfsuhX6FA2Uw5g/exec"
+      >
+        <section class="instructions" aria-label="Survey instructions">
+          <p>
+            Please rate each item on a scale of 1 to 5. Use 1 for Very Poor or Very Dissatisfied,
+            5 for Excellent or Very Satisfied, and N/A where the item does not apply.
+          </p>
+        </section>
+
+        <fieldset class="survey-section">
+          <legend>Resident Details</legend>
+          <div id="residentDetails" class="field-grid"></div>
+        </fieldset>
+
+        <div id="surveySections"></div>
+
+        <div class="form-actions">
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit">Submit survey</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
