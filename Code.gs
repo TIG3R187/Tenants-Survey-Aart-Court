@@ -83,6 +83,21 @@ function setupAartCourtSurveyWebResponses() {
   return spreadsheet.getUrl();
 }
 
+
+/**
+ * Logs the exact Aart Court response spreadsheet URL for this Apps Script project.
+ * Use this if setup already ran, or if a deployment created the sheet automatically.
+ */
+function logAartCourtSurveyWebResponsesUrl() {
+  var sheet = getAartCourtResponseSheet_();
+  ensureAartCourtResponseHeader_(sheet);
+
+  var url = sheet.getParent().getUrl();
+  Logger.log('Aart Court response spreadsheet URL: ' + url);
+
+  return url;
+}
+
 function doPost(e) {
   var sheet = getAartCourtResponseSheet_();
   ensureAartCourtResponseHeader_(sheet);
